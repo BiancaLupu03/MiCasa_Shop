@@ -19,10 +19,12 @@ body {
 }
 
 .products-container {
+  position: relative;
   padding: 50px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 20px;
+  top: 70px;
 }
 
 .product-card {
@@ -75,4 +77,59 @@ body {
 
 .cart-btn {
   background-color: var(--pink);
+}
+
+
+.navbar {
+	background-color: var(--green);
+	height: 70px;
+	display: flex;
+	justify-content: space-around;
+	border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+	position: fixed;
+	width: 100vw;
+	z-index: 100;
+}
+
+.logo {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	text-decoration: none;
+	color: var(--yellow);
+}
+
+.fa-f {
+	width: 9px !important;
+}
+
+.nav-actions {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+}
+
+.nav-actions a {
+	text-decoration: none;
+	color: var(--yellow);
+}
+
+.cart-link {
+	position: relative;
+}
+
+.badge {
+	height: 15px;
+	width: 15px;
+	background-color: red;
+	color: white;
+	font-size: 12px;
+	border-radius: 50%;
+	display: flex;
+	gap: 10px;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	top: -8px;
+	right: 30px;
 }
