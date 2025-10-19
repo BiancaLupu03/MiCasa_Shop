@@ -85,7 +85,18 @@ body {
   background-color: var(--pink);
 }
 
-.navbar {
+#category-filter {
+  background-color: transparent;
+  border: none;
+  font-size: 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.navbar,
+.category-dropbar {
   background-color: var(--green);
   height: 70px;
   display: flex;
@@ -150,7 +161,8 @@ body {
 #price,
 #imageURL,
 #description,
-#add-btn {
+#add-or-edit-btn,
+#category {
   border-radius: 5px;
   padding: 10px;
   border: none;
@@ -163,14 +175,14 @@ body {
   resize: vertical;
 }
 
-#add-btn {
+#add-or-edit-btn {
   background-color: var(--red);
   color: white;
   cursor: pointer;
   opacity: 0.9;
 }
 
-#add-btn:hover {
+#add-or-edit-btn:hover {
   opacity: 1;
 }
 
