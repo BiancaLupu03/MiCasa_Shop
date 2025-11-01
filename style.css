@@ -408,9 +408,10 @@ body {
     gap: 15px;
   }
 
-  .product-card {
-    width: 100%;
-  }
+ .product-card {
+  width: 100%;
+  max-width: 350px; 
+ }
 
   /* Formulare */
   #add-form {
