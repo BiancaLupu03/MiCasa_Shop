@@ -44,7 +44,6 @@ body {
   width: 20vw;
   padding: 5px;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-
 }
 
 .product-card:hover {
@@ -392,11 +391,13 @@ body {
     height: auto;
     padding: 10px 0;
   }
+
   .nav-actions {
     flex-wrap: wrap;
     justify-content: center;
     gap: 8px;
   }
+
   .logo {
     justify-content: center;
   }
@@ -404,20 +405,26 @@ body {
   /* Grid produse */
   .products-container {
     grid-template-columns: 1fr;
-    padding: 20px;
-    gap: 15px;
+    padding: 15px;
+    gap: 10px;
   }
 
- .product-card {
-  width: 100%;
-  max-width: 350px; 
- }
+  .product-card {
+    width: 100%;
+    max-width: 350px;
+  }
 
   /* Formulare */
   #add-form {
     padding: 15px;
   }
-  #name, #price, #imageURL, #description, #add-or-edit-btn, #category {
+
+  #name,
+  #price,
+  #imageURL,
+  #description,
+  #add-or-edit-btn,
+  #category {
     font-size: 13px;
     padding: 8px;
   }
@@ -426,9 +433,12 @@ body {
   #products-table {
     font-size: 12px;
   }
-  #products-table thead th, #products-table tbody td {
+
+  #products-table thead th,
+  #products-table tbody td {
     padding: 6px;
   }
+
   .cell-img img {
     height: 40px;
     width: 40px;
@@ -438,6 +448,7 @@ body {
   .cart-container {
     padding: 70px 15px;
   }
+
   .card-cart {
     width: 100%;
     flex-direction: column;
