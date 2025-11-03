@@ -120,12 +120,11 @@ function handleActions(e) {
     addOrEditBtn.innerHTML = "Save";
   } else if (clickedElement.parentElement.classList.contains("delete")) {
     productId = getTableRow(clickedElement).dataset.id;
-    fetch(`${URL}/${productId}`),
-      {
-        method: "DELETE",
-      }.then((response) => {
-        renderTable();
-      });
+    fetch(`${URL}/${productId}`, {
+      method: "DELETE",
+    }).then((response) => {
+      renderTable();
+    });
   }
 }
 
@@ -133,9 +132,18 @@ function getTableRow(editIcon) {
   return editIcon.parentElement.parentElement.parentElement.parentElement;
 }
 
+function updateCartCount() {
+  const badge = document.querySelector("#cart-count");
+  if (!badge) return;
+  const cart = JSON.parse(localStorage.getItem("cart")) || {};
+  let totalItems = 0;
+  for (let id in cart) {
+    totalItems += cart[id].quantity || 0;
+  }
+  badge.textContent = totalItems;
+}
 
-
-
+document.addEventListener("DOMContentLoaded", updateCartCount);
 
 //butonul de add se transforma in add or edit si schimbam si id-ul
 // cream o variabila de mod edit in care stocam true daca editam sau false daca adaugam (default value)

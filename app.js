@@ -1,4 +1,10 @@
-window.addEventListener("DOMContentLoaded", displayProducts);
+window.addEventListener("DOMContentLoaded", () => {
+  displayProducts(); // afișează produsele inițial
+  const container = document.querySelector(".products-container");
+  if (container) {
+    container.addEventListener("click", handleProductClick); // listener-ul se adaugă o singură dată
+  }
+});
 
 const URL = "https://68f207fab36f9750deeb2301.mockapi.io/products";
 
@@ -24,36 +30,28 @@ function displayProducts() {
         .map(
           (product) => `
             <div class="product-card">
+              <div class="category">Category: ${product.category}</div>
               <img src="${product.imageURL}" alt="Product Image">
               <div class="product-info">
                 <h3>${product.name}</h3>
-                <div class="category">Category: ${product.category}</div>
+                
                 <div class="price">${product.price} LEI</div>
                 <div class="buttons">
-                  <button class="details-btn">Details</button>
-                  <button data-id="${product.id}" class="cart-btn">Add to Cart</button>
+                  <button class="details-btn" data-id="${product.id}" onclick="window.location.href='details.html?id=${product.id}'">Details</button>
+                  <button class="cart-btn" data-id="${product.id}">Add to Cart</button>
                 </div>
-              </div>
             </div>
+          </div>
           `
         )
         .join("");
-  
-        document
-          .querySelector(".products-container")
-          .addEventListener("click", handleProductClick);
-        updateCartCount();
-     
-      
-        })
-      
+    })
+
     .catch((error) => console.error(error));
-      
 }
 
-
 function handleProductClick(e) {
-  const btn = e.target.closest && e.target.closest(".cart-btn");
+  const btn = e.target.closest(".cart-btn");
   if (!btn) return;
 
   const productId = btn.dataset.id;
@@ -92,4 +90,4 @@ function updateCartCount() {
   badge.textContent = totalItems;
 }
 
-
+document.addEventListener("DOMContentLoaded", updateCartCount);
