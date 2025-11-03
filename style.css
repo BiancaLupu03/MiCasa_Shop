@@ -90,13 +90,13 @@ button.details:hover,
 }
 
 .products-container {
-  display: grid !important;
-  position: relative !important;
-  padding: 50px !important;
-  display: grid !important;
+  display: grid;
+  position: relative;
+  padding: 50px;
+  display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 20px !important;
-  top: 70px !important;
+  gap: 20px;
+  top: 70px;
 }
 
 .admin-container,
@@ -506,16 +506,15 @@ button.details:hover,
 
   /* Grid produse */
   .products-container {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     padding: 15px;
     gap: 10px;
+    justify-items: center;
   }
 
   .product-card {
     width: 100%;
     max-width: 350px;
-    margin-right: auto;
-    margin-left: auto;
   }
 
   .product-card img {
