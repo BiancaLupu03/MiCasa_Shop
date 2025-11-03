@@ -46,7 +46,7 @@ button,
 .cart-btn,
 .category-dropbar {
   font-family: "Poppins", sans-serif;
-  
+
   font-weight: 500;
   transition: all 0.2s ease-in-out;
 }
@@ -78,20 +78,6 @@ button.details:hover,
   background-color: #2c3e50;
 }
 
-/* 🔹 Prețurile și titlurile produselor */
-.cell-price,
-.details-price {
-  color: #34495e;
-  font-weight: 600;
-}
-
-.cell-name,
-#details-name {
-  font-weight: 600;
-  color: rgb(249, 117, 139);
-  font-size: 1.05rem;
-}
-
 /* 🔹 Badge-ul din coș */
 .badge {
   background-color: rgb(249, 117, 139);
@@ -103,23 +89,15 @@ button.details:hover,
   align-items: left;
 }
 
-/* 🔹 Mică îmbunătățire la carduri – doar vizual */
-.details-card, .product-card {
-  background-color: #f9fafa;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-  border: 1px solid #e1e7e8;
-}
-
 .products-container {
   display: grid !important;
   position: relative !important;
   padding: 50px !important;
   display: grid !important;
-  grid-template-columns: 1fr 1fr 1fr !important;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 20px !important;
-  top: 70px   !important;
+  top: 70px !important;
 }
-
 
 .admin-container,
 .details-container {
@@ -209,8 +187,6 @@ button.details:hover,
   background-color: var(--pink);
   box-shadow: 0 4px 10px rgba(247, 125, 125, 0.4);
 }
-
-
 
 #category-filter {
   background-color: transparent;
@@ -538,7 +514,7 @@ button.details:hover,
   .product-card {
     width: 100%;
     max-width: 350px;
-    margin-right: auto
+    margin-right: auto;
     margin-left: auto;
   }
 
@@ -601,8 +577,6 @@ button.details:hover,
   align-items: center;
   padding: 100px 20px;
 }
-
-
 
 .details-container {
   display: flex;
