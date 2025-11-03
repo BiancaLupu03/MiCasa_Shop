@@ -30,7 +30,6 @@ function displayProducts() {
         .map(
           (product) => `
             <div class="product-card">
-              <div class="category">Category: ${product.category}</div>
               <img src="${product.imageURL}" alt="Product Image">
               <div class="product-info">
                 <h3>${product.name}</h3>
